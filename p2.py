@@ -1,17 +1,30 @@
-import math as m 
+def inv_check(inventory: dict[str,int],demand:dict[str,int]):
+    shortitem={}
+    for key in demand:
+        if key not in inventory:
+            print("Not Present",key)
+            continue
+        if inventory[key]>=demand[key]:
+            inventory[key]-=demand[key]
+        elif inventory[key]<demand[key]:
+            shortitem[key]=demand[key]-inventory[key]
+            del inventory[key]
+    return inventory,shortitem
 
-def is_prime(n:int)->bool:
-    if n==0 or n==1:
-        return False
-    for i in range(2,int(m.sqrt(n))+1):
-        if n%i==0:
-            return False
-    return True
+inv={}
+demands={}
+n1=int(input("Enter number of terms : "))
+for i in range(n1):
+    key=input("Enter item : ")
+    val=int(input("Enter quantity : "))
+    inv[key]=val
 
-arr=eval(input("Enter array of numbers"))
-ans={}
-for i in arr:
-    ans[i]=is_prime(i)
+n2=int(input("Enter number of terms : "))
+for i in range(n2):
+    key=input("Enter item : ")
+    val=int(input("Enter quantity : "))
+    demands[key]=val
 
-print(ans)
-    
+invs,shortitem = inv_check(inv,demands)
+print("inventory = ",invs)
+print("Short item = ",shortitem)
