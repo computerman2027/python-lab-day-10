@@ -18,4 +18,5 @@ while True:
         print("PALINDROME STRING =",sop.palindrome(st))
     elif choice == 5:
         break
-
+    else:
+        print("INVALID CHOICE")
