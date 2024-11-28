@@ -8,7 +8,7 @@ def is_prime(n:int)->bool:
             return False
     return True
 
-arr=eval(input("Enter array of numbers"))
+arr=eval(input("Enter list of numbers : "))
 ans={}
 for i in arr:
     ans[i]=is_prime(i)

@@ -13,13 +13,13 @@ def inv_check(inventory: dict[str,int],demand:dict[str,int]):
 
 inv={}
 demands={}
-n1=int(input("Enter number of terms : "))
+n1=int(input("Enter number of terms of inventory : "))
 for i in range(n1):
     key=input("Enter item : ")
     val=int(input("Enter quantity : "))
     inv[key]=val
 
-n2=int(input("Enter number of terms : "))
+n2=int(input("Enter number of terms of demands : "))
 for i in range(n2):
     key=input("Enter item : ")
     val=int(input("Enter quantity : "))

@@ -1,12 +1,9 @@
 def char_frequency(text):
-    ans={}
+    text=text.lower()
+    ans = {}
     for ch in text:
-        if ch == " ":
-            continue
-        if ans.get(ch) is not None:
-            ans[ch]+=1
-        else:
-            ans[ch]=1
+        if ch != " ":
+            ans[ch] = ans.get(ch, 0) + 1 #dictionary comprehension
     return ans
 
 st=input("Enter a string : ")

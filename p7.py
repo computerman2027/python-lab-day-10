@@ -1,8 +1,8 @@
 import string_operations as sop
 
-
+print("Menu\n1. Reverse a string\n2. Frequency of a character\n3. Convert to uppercase\n4. Palindrome string\n5. Exit")
 while True:
-    choice=int(input("Menu\n1. Reverse a string\n2. Frequency of a character\n3. Convert to uppercase\n4. Palindrome string\n5. Exit\nEnter your choice : "))
+    choice=int(input("Enter your choice : "))
     if choice==1:
         st=input("Enter a string : ")
         print("Reversed String =",sop.rev_a_string(st))
